@@ -3,4 +3,4 @@ select
     user_id as customer_id,
     order_date,
     status
-from playground.dbt_ohalfman.jaffle_shop_orders
+from {{ref('dbt_ohalfman', 'jaffle_shop_orders')}}
