@@ -5,4 +5,4 @@ select
     status,
     amount / 100 as amount,
     created as created_at
-from playground.dbt_ohalfman.stripe_payments
+from {{ref('dbt_ohalfman','stripe_payments')}}
