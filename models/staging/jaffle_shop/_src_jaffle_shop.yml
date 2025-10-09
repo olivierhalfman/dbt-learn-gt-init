@@ -7,5 +7,7 @@ sources:
       - name: jaffle_shop_customers
 
   - name: stripe
+    database: playground  
+    schema: dbt_ohalfman  
     tables:
       - name: stripe_payments
