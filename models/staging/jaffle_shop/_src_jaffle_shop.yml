@@ -1,10 +1,20 @@
 sources:
   - name: jaffle_shop
     database: playground  
-    schema: dbt_ohalfman  
+    schema: dbt_ohalfman
+    config:
+      freshness:
+        warn_after:
+          count: 12
+          period: hour
+        error_after:
+          count: 1
+          period: day
+      loaded_at_field: _etl_loaded_at
     tables:
       - name: jaffle_shop_orders
       - name: jaffle_shop_customers
+        freshness: null
 
   - name: stripe
     database: playground  
