@@ -3,4 +3,4 @@ select
     user_id as customer_id,
     order_date,
     status
-from {{ref('dbt_ohalfman', 'jaffle_shop_orders')}}
+from {{source('dbt_ohalfman', 'jaffle_shop_orders')}}
