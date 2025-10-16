@@ -1,5 +1,4 @@
 with
-
 source as (
     select * from {{source('jaffle_shop', 'jaffle_shop_orders')}}
 ),
@@ -9,7 +8,7 @@ renamed as (
         id as order_id,
         user_id as customer_id,
         order_date,
-        status
+        status as order_status
     from source
 )
 
