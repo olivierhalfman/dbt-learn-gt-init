@@ -10,14 +10,8 @@ sources:
         error_after:
           count: 1
           period: day
-      loaded_at_field: _etl_loaded_at
+      loaded_at_field: order_date
     tables:
       - name: jaffle_shop_orders
       - name: jaffle_shop_customers
         freshness: null
-
-  - name: stripe
-    database: playground  
-    schema: dbt_ohalfman  
-    tables:
-      - name: stripe_payments
