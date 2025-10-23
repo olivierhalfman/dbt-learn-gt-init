@@ -1,6 +1,16 @@
 sources:
   - name: stripe
     database: playground  
-    schema: dbt_ohalfman  
+    schema: dbt_ohalfman
+
     tables:
       - name: stripe_payments
+        config:
+          freshness:
+            warn_after: 
+              count: 12
+              period: hour
+            error_after:
+              count: 1
+              period: day
+          loaded_at_field: create
