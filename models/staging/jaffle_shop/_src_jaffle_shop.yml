@@ -2,16 +2,21 @@ sources:
   - name: jaffle_shop
     database: playground  
     schema: dbt_ohalfman
+    description: A clone of a postgres application database.
     tables:
       - name: jaffle_shop_orders
+        description: Raw order data.
         columns:
           - name: id
+            description: Primary key for customer data
             data_tests:
               - unique
               - not_null
       - name: jaffle_shop_customers
+        description: Raw customers data.
         columns:
           - name: id
+            description: Primary key for order data
             data_tests:
               - unique
               - not_null
