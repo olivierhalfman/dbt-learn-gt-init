@@ -4,4 +4,15 @@ sources:
     schema: dbt_ohalfman
     tables:
       - name: jaffle_shop_orders
+        columns:
+          - name: id
+            data_tests:
+              - unique
+              - not_null
       - name: jaffle_shop_customers
+        columns:
+          - name: id
+            data_tests:
+              - unique
+              - not_null
+
