@@ -1,12 +1,12 @@
 models:
-  - name: stg_jaffle_shop__customers
+  - name: stg_jaffle_shop_customers
     columns:
       - name: customer_id
         data_tests:
           - unique
           - not_null
 
-  - name: stg_jaffle_shop__orders
+  - name: stg_jaffle_shop_orders
     columns:
       - name: order_id
         data_tests:
@@ -22,4 +22,3 @@ models:
                   - returned
                   - placed
                   - return_pending
-    
