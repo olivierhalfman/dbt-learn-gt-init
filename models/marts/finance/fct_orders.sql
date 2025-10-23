@@ -1,7 +1,7 @@
 with 
 orders as (
     select * 
-    from {{ ref("sgt_jaffle_shop_orders") }}
+    from {{ ref("stg_jaffle_shop_orders") }}
 ),
 
 payements as (
